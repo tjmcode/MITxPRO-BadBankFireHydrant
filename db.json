@@ -1,0 +1,154 @@
+{
+  "accounts": [
+    {
+      "username": "me1",
+      "password": "me1p",
+      "email": "me1@mcode.com",
+      "balance": 556.11,
+      "created": "2022-01-30 17:54:14.736",
+      "transactions": [
+        {
+          "type": "DEPOSIT",
+          "amount": 111.11,
+          "balance": 111.11,
+          "timeStamp": "2022-01-30 17:54:14.736"
+        },
+        {
+          "type": "BALANCE",
+          "amount": 0,
+          "balance": 111.11,
+          "timeStamp": "2022-01-30 17:54:23.887"
+        },
+        {
+          "type": "LEDGER",
+          "amount": 0,
+          "balance": 111.11,
+          "timeStamp": "2022-01-30 17:54:28.270"
+        },
+        {
+          "type": "LOGIN",
+          "amount": 0,
+          "balance": 111.11,
+          "timeStamp": "2022-01-30 17:54:40.141"
+        },
+        {
+          "type": "DEPOSIT",
+          "amount": 1000,
+          "balance": 1111.11,
+          "timeStamp": "2022-01-30 17:54:47.447"
+        },
+        {
+          "type": "WITHDRAW",
+          "amount": 555,
+          "balance": 556.11,
+          "timeStamp": "2022-01-30 17:54:54.831"
+        },
+        {
+          "type": "BALANCE",
+          "amount": 0,
+          "balance": 556.11,
+          "timeStamp": "2022-01-30 17:54:59.95"
+        },
+        {
+          "type": "LEDGER",
+          "amount": 0,
+          "balance": 556.11,
+          "timeStamp": "2022-01-30 17:55:3.496"
+        }
+      ]
+    },
+    {
+      "username": "me2",
+      "password": "me2p",
+      "email": "me2@mcode.com",
+      "balance": 222.22,
+      "created": "2022-01-30 17:55:35.180",
+      "transactions": [
+        {
+          "type": "DEPOSIT",
+          "amount": 222.22,
+          "balance": 222.22,
+          "timeStamp": "2022-01-30 17:55:35.180"
+        }
+      ]
+    },
+    {
+      "username": "me3",
+      "password": "me3p",
+      "email": "me3@mcode.com",
+      "balance": 2298.88,
+      "created": "2022-01-30 17:55:49.627",
+      "transactions": [
+        {
+          "type": "DEPOSIT",
+          "amount": 333.33,
+          "balance": 333.33,
+          "timeStamp": "2022-01-30 17:55:49.627"
+        },
+        {
+          "type": "LEDGER",
+          "amount": 0,
+          "balance": 333.33,
+          "timeStamp": "2022-01-30 17:56:20.211"
+        },
+        {
+          "type": "OVERDRAFT",
+          "amount": 35,
+          "balance": -2701.67,
+          "timeStamp": "2022-01-30 17:56:38.6"
+        },
+        {
+          "type": "WITHDRAW",
+          "amount": 3000,
+          "balance": -2701.67,
+          "timeStamp": "2022-01-30 17:56:38.6"
+        },
+        {
+          "type": "LEDGER",
+          "amount": 0,
+          "balance": -2701.67,
+          "timeStamp": "2022-01-30 17:56:46.25"
+        },
+        {
+          "type": "DEPOSIT",
+          "amount": 5000.55,
+          "balance": 2298.88,
+          "timeStamp": "2022-01-30 17:57:0.910"
+        },
+        {
+          "type": "LEDGER",
+          "amount": 0,
+          "balance": 2298.88,
+          "timeStamp": "2022-01-30 17:57:11.594"
+        }
+      ]
+    },
+    {
+      "username": "me4",
+      "password": "me4",
+      "email": "me4@mcode.com",
+      "balance": 444.44,
+      "created": "2022-01-30 17:56:5.878",
+      "transactions": [
+        {
+          "type": "DEPOSIT",
+          "amount": 444.44,
+          "balance": 444.44,
+          "timeStamp": "2022-01-30 17:56:5.878"
+        },
+        {
+          "type": "LOGIN",
+          "amount": 0,
+          "balance": 444.44,
+          "timeStamp": "2022-01-30 17:58:14.334"
+        },
+        {
+          "type": "LEDGER",
+          "amount": 0,
+          "balance": 444.44,
+          "timeStamp": "2022-01-30 17:58:23.788"
+        }
+      ]
+    }
+  ]
+}

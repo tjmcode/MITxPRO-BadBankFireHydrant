@@ -1,0 +1,20 @@
+----------------------------------
+BadBank Homework Instructions
+----------------------------------
+
+1) Build front-end
+    - Bootstrap
+        https://getbootstrap.com
+    - API
+    - Modules
+
+2) Build back-end
+    - Server
+    - Static files
+    - Data Stores
+    - API
+
+3) Persist data
+    - Mantain state
+
+4) Demo    
