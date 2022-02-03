@@ -59,6 +59,7 @@
  *  Date:         By-Group:   Rev:     Description:
  *
  *  24-Dec-2021   TJM-MCODE  {0001}    New module for MIT Fire Hydrant assignment.
+ *  02-Feb-2022   TJM-MCODE  {0002}    Labeled all buttons with function name vs. a generic "submit"
  *
  *
  *
@@ -127,7 +128,7 @@ ui.createAccount =
                 </div>
             </div>
             <div class="col-10">
-                <button class="btn btn-dark" onclick="create()" type="submit">Submit</button>
+                <button class="btn btn-outline-light" onclick="create()" type="create">Create Account</button>
             </div>
         </div>
     </div>`;
@@ -151,7 +152,7 @@ ui.login =
                 </div>
             </div>
             <div class="col-10">
-                <button class="btn btn-dark" onclick="login()" type="login">Submit</button>
+                <button class="btn btn-outline-light" onclick="login()" type="login">Login</button>
             </div>
         </div>
     </div>`;
@@ -175,7 +176,7 @@ ui.deposit =
                 </div>
             </div>
             <div class="col-10">
-                <button class="btn btn-dark" onclick="deposit()" type="deposit">Submit</button>
+                <button class="btn btn-outline-light" onclick="deposit()" type="deposit">Deposit</button>
             </div>
         </div>
     </div>`;
@@ -199,7 +200,7 @@ ui.withdraw =
                 </div>
             </div>
             <div class="col-10">
-                <button class="btn btn-dark" onclick="withdraw()" type="withdraw">Submit</button>
+                <button class="btn btn-outline-light" onclick="withdraw()" type="withdraw">Withdraw</button>
             </div>
         </div>
     </div>`;
@@ -217,7 +218,7 @@ ui.transactions =
                 </div>
             </div>
             <div class="col-10">
-                <button class="btn btn-dark" onclick="transactions()" type="display">Submit</button>
+                <button class="btn btn-outline-light" onclick="transactions()" type="display">View Ledger</button>
             </div>
         </div>
     </div>`;
@@ -235,7 +236,7 @@ ui.balance =
                 </div>
             </div>
             <div class="col-10">
-                <button class="btn btn-dark" onclick="balance()" type="display">Submit</button>
+                <button class="btn btn-outline-light" onclick="balance()" type="display">View Balance</button>
             </div>
     </div>`;
 
@@ -246,7 +247,7 @@ ui.allData =
             <h5 class="card-title">Show all data for all Accounts</h5>
             <p class="card-text">WARNING: This is display all the data from the JSON Database.</p>
             <div class="col-10">
-                <button class="btn btn-dark" onclick="showAllData()" type="display">Submit</button>
+                <button class="btn btn-outline-light" onclick="showAllData()" type="display">Get All Data</button>
             </div>
         </div>
     </div>`;
