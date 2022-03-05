@@ -35,9 +35,10 @@ Helper Videos:
 ## Demonstration Video of Submission
 
 * This video was recorded of the initial submission on JAN 30, 2022.
+https://youtu.be/_zSHbX0uuzc
 
 <video width="1024" controls autoplay>
-    <source src=".\videos\badbank-tjmcode-demo.mp4" type="video/mp4">
+    <source src="https://youtu.be/_zSHbX0uuzc" type="video/mp4">
 </video>
 
 
