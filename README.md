@@ -35,8 +35,11 @@ Helper Videos:
 ## Demonstration Video of Submission
 
 * This video was recorded of the initial submission on JAN 30, 2022.
+
 <p>
-<video id="demo-video" src=".\videos\badbank-tjmcode-demo.mp4" width="1024" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allow="autoplay *" loop autoplay autobuffer controls muted></video>
+<video id="demo-video" style="border-style:solid; border-width:2px" src="https://user-images.githubusercontent.com/8990676/156894852-110b627c-05cd-4434-89af-b2570b4d5d83.mp4" width="1024" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allow="autoplay *" loop autoplay autobuffer controls muted>
+Your browser does not support the HTML5 player.
+</video>
 </p>
 
 ## Getting Started
