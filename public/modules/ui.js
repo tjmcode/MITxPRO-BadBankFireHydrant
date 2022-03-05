@@ -2,7 +2,7 @@
 
 /*
  *      Title:    Bad Bank UI
- *      Module:   modules (badbank_MicroCODE:ui.js)
+ *      Module:   modules (badbank-tjmcode:ui.js)
  *      Project:  MicroCODE Version of MIT 'Bad Bank'
  *      Customer: Internal
  *      Creator:  MicroCODE Incorporated

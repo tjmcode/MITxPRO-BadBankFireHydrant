@@ -2,7 +2,7 @@
 
 /*
  *      Title:    Bad Bank API
- *      Module:   api (badbank_MicroCODE:api.js)
+ *      Module:   api (badbank-tjmcode:api.js)
  *      Project:  MicroCODE Version of MIT 'Bad Bank'
  *      Customer: Internal
  *      Creator:  MicroCODE Incorporated

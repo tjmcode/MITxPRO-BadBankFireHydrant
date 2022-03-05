@@ -2,7 +2,7 @@
 
 /*
  *      Title:    Bad Bank SERVER INDEX
- *      Module:   index (badbank_MicroCODE:index.js)
+ *      Module:   index (badbank-tjmcode:index.js)
  *      Project:  MicroCODE Version of MIT 'Bad Bank'
  *      Customer: Internal
  *      Creator:  MicroCODE Incorporated
