@@ -21,14 +21,13 @@
  *      DESCRIPTION:
  *      ------------
  *
- *      This module implements the MicroCODE's Common JavaScript Server/Backend functions.
- *
+ *      This module implements the MicroCODE's Common JavaScript Server/Back-End functions.
  *
  *
  *      REFERENCES:
  *      -----------
  *
- *      1. ...
+ *      1. MIT xPRO Course: Professional Certificate in Coding: Full Stack Development with MERN
  *
  *
  *      VIDEOS:
@@ -44,7 +43,7 @@
  *  Date:         By-Group:   Rev:     Description:
  *
  *  27-Jan-2022   TJM-MCODE  {0001}    New module for common reusable Javascript UI/Client functions.
- *
+ *  05-Mar-2022   TJM-MCODE  {0002}    Documentation updates.
  *
  *
  */
@@ -115,7 +114,7 @@ methods.simplifyText = function (textToSimplify)
 /**
  * Rounds a floating point number that represents dollars and cents to 2 decimals digits (pennies).
  *
- * @param {flost} numberToRound as a floating point value
+ * @param {float} numberToRound as a floating point value
  * @returns number rounded to dollars and cents (2 decimals place)
  */
 methods.roundToCents = function (numberToRound)
@@ -123,4 +122,6 @@ methods.roundToCents = function (numberToRound)
     return +(Math.round(numberToRound + "e+2") + "e-2");
 };
 
-module.exports = methods;
+// NOTE: Build as CommonJS Module for NodeJS Version v16.7.0
+
+module.exports = methods; // Common JS (CJS) form: module.exports = methods;

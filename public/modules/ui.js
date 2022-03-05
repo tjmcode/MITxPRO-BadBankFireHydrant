@@ -59,15 +59,15 @@
  *  Date:         By-Group:   Rev:     Description:
  *
  *  24-Dec-2021   TJM-MCODE  {0001}    New module for MIT Fire Hydrant assignment.
- *  02-Feb-2022   TJM-MCODE  {0002}    Labeled all buttons with function name vs. a generic "submit"
+ *  02-Feb-2022   TJM-MCODE  {0002}    Labeled all buttons with function name vs. a generic "submit".
+ *  05-Mar-2022   TJM-MCODE  {0002}    Documentation updates.
  *
  *
  *
  */
 "use strict";
 
-//// ui is an object holding all our User Interface (UI) Elements off-screen ready to load into the 'target' DIV
-
+// ui is an object holding all our User Interface (UI) Elements off-screen ready to load into the 'target' DIV
 var ui = {};
 
 ui.navigation =

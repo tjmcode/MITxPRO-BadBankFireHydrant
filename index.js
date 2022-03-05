@@ -59,14 +59,16 @@
  *  Date:         By-Group:   Rev:     Description:
  *
  *  26-Dec-2021   TJM-MCODE  {0001}    New module for MIT Fire Hydrant assignment.
- *
+ *  05-Mar-2022   TJM-MCODE  {0002}    Documentation updates, and refactored 'transaction' to 'createTransaction'.
  *
  *
  */
 "use strict";
 
+// NOTE: Build as CommonJS Module for NodeJS Version v16.7.0
+
 // Include our common MicroCODE Server Library
-var mcode = require('./mcodeServer.js');
+var mcode = require('./mcodeServer.js');  // CommonJS (CJS) Form: var mcode = require('./mcodeServer.js');
 
 /*
  * SERVER: FILE SYSTEM, STORAGE, and STRUCTURES
@@ -76,15 +78,19 @@ var mcode = require('./mcodeServer.js');
  */
 
 // Load ExpressJS
+// CommonJS (CJS) Form: var express = require('express');
 var express = require('express');
 
 // Instantiate ExpressJS
+// CommonJS (CJS) Form: var app = express();
 var app = express();
 
 // Load LowDB
+// CommonJS (CJS) Form: var low = require("lowdb");
 var low = require("lowdb");
 
 // Load LowDB FileSync Adapter
+// CommonJS (CJS) Form: var fs = require("lowdb/adapters/FileSync");
 var fs = require("lowdb/adapters/FileSync");
 
 // Connect LowDB File Adpater to out JSON DB
@@ -154,9 +160,10 @@ app.get('/', function (req, res)
 });
 
 /**
- * Create() -- account route
- * return success or failure string
+ * @function api.create() -- create account route
  *
+ * @returns {object} account object if successful
+ * @returns {string} 401 status with error message if unsucessful
  */
 app.get('/account/create/:username/:email/:password/:deposit', function (req, res)
 {
@@ -186,10 +193,10 @@ app.get('/account/create/:username/:email/:password/:deposit', function (req, re
 });
 
 /**
- * Login() -- user confirm credentials
- * If success, return account object
- * If fail, return null
+ * @function api.login() -- user confirm credentials
  *
+ * @returns {object} account object if successful
+ * @returns {string} 401 status with error message if unsucessful
  */
 app.get('/account/login/:email/:password', function (req, res)
 {
@@ -204,7 +211,7 @@ app.get('/account/login/:email/:password', function (req, res)
         if (account.password === req.params.password)
         {
             console.log("Logged in SUCCEEDED, email: " + req.params.email);
-            account.transactions.push(transaction("LOGIN", 0.00, account.balance));
+            account.transactions.push(createTransaction("LOGIN", 0.00, account.balance));
             db.get("accounts").assign(account).write();
             res.send(account);
         }
@@ -224,8 +231,10 @@ app.get('/account/login/:email/:password', function (req, res)
 });
 
 /**
- * Get() -- Return account based on email
+ * @function api.get() -- return account based on email UNUSED
  *
+ * @returns {object} account object if successful
+ * @returns {null} null if unsucessful
  */
 app.get('/account/get/:email', function (req, res)
 {
@@ -239,9 +248,10 @@ app.get('/account/get/:email', function (req, res)
 });
 
 /**
- * Deposit() -- amount for email
- * return success or failure string
+ * @function api.deposit() -- deposit money to account by email
  *
+ * @returns {object} account object if successful
+ * @returns {string} 401 status with error message if unsucessful
  */
 app.get('/account/deposit/:email/:amount', function (req, res)
 {
@@ -256,7 +266,7 @@ app.get('/account/deposit/:email/:amount', function (req, res)
     {
         account.balance += parseFloat(amount);
         account.balance = mcode.roundToCents(account.balance);
-        account.transactions.push(transaction("DEPOSIT", amount, account.balance));
+        account.transactions.push(createTransaction("DEPOSIT", amount, account.balance));
         db.get("accounts").assign(account).write();
         res.send(account);
     }
@@ -269,9 +279,10 @@ app.get('/account/deposit/:email/:amount', function (req, res)
 });
 
 /**
- * Withdraw() -- amount from email
- * return success or failure string
+ * @function api.withdraw() -- withdraw amount of money from account by email
  *
+ * @returns {object} account object if successful
+ * @returns {string} 401 status with error message if unsucessful
  */
 app.get('/account/withdraw/:email/:amount', function (req, res)
 {
@@ -291,10 +302,10 @@ app.get('/account/withdraw/:email/:amount', function (req, res)
         {
             account.balance -= 35.00;  // overdraw penalty
             account.balance = mcode.roundToCents(account.balance);
-            account.transactions.push(transaction("OVERDRAFT", 35.00, account.balance));
+            account.transactions.push(createTransaction("OVERDRAFT", 35.00, account.balance));
         }
 
-        account.transactions.push(transaction("WITHDRAW", amount, account.balance));
+        account.transactions.push(createTransaction("WITHDRAW", amount, account.balance));
         db.get("accounts").assign(account).write();
         res.send(account);
     }
@@ -307,8 +318,10 @@ app.get('/account/withdraw/:email/:amount', function (req, res)
 });
 
 /**
- * Balance() -- Return balance for account
+ * @function api.balance() -- Return balance for account
  *
+ * @returns {object} account object if successful
+ * @returns {string} 401 status with error message if unsucessful
  */
 app.get('/account/balance/:email', function (req, res)
 {
@@ -320,7 +333,7 @@ app.get('/account/balance/:email', function (req, res)
 
     if (account)
     {
-        account.transactions.push(transaction("BALANCE", 0.00, account.balance));
+        account.transactions.push(createTransaction("BALANCE", 0.00, account.balance));
         db.get("accounts").assign(account).write();
         res.send(account);
     }
@@ -334,8 +347,10 @@ app.get('/account/balance/:email', function (req, res)
 });
 
 /**
- * Transactions() -- Return all transactions for account
+ * @function api.transactions() -- Return all transactions for account
  *
+ * @returns {object} account object if successful
+ * @returns {string} 401 status with error message if unsucessful
  */
 app.get('/account/transactions/:email', function (req, res)
 {
@@ -346,7 +361,7 @@ app.get('/account/transactions/:email', function (req, res)
     let account = db.get("accounts").find({ email: req.params.email }).value();
     if (account)
     {
-        account.transactions.push(transaction("LEDGER", 0.00, account.balance));
+        account.transactions.push(createTransaction("LEDGER", 0.00, account.balance));
         db.get("accounts").assign(account).write();
         res.send(account);
     }
@@ -360,8 +375,9 @@ app.get('/account/transactions/:email', function (req, res)
 });
 
 /**
- * All() -- Return data for all accounts
+ * @function api.allData() -- Return data for all accounts
  *
+ * @returns {object} accounts JSON data object if successful
  */
 app.get('/account/all', function (req, res)
 {
@@ -374,12 +390,13 @@ app.get('/account/all', function (req, res)
 
 
 /**
- * createAccount() -- Create a User Account object.
+ * @function createAccount() -- Create a User Account object.
  *
  * @param {string} username selected by the user.
  * @param {string} password set by the user.
  * @param {string} email email address supplied by the user.
  * @param {number} deposit initial deposit, or $0.00.
+ * @returns {object} newly created account object with its initial transaction.
  */
 var createAccount = function (username, password, email, deposit)
 {
@@ -397,19 +414,20 @@ var createAccount = function (username, password, email, deposit)
     account.balance = mcode.roundToCents(account.balance);
 
     // make initial depsoit transaction... (optional)
-    account.transactions.push(transaction("DEPOSIT", deposit, account.balance));
+    account.transactions.push(createTransaction("DEPOSIT", deposit, account.balance));
 
     return account;
 };
 
 /**
- * transaction() -- Create an Account Transaction object.
+ * @function createTransaction() -- Create an Account Transaction object.
  *
  * @param {string} type One of: DEPOSIT, WITHDRAW, BALANCE, CLOSE.
  * @param {number} amount amount of money involved in this transaction.
  * @param {number} balance resulting balance after the transaction executed.
+ * @returns {object} newly created transaction object.
  */
-var transaction = function (type, amount, balance)
+var createTransaction = function (type, amount, balance)
 {
     let transaction =
     {

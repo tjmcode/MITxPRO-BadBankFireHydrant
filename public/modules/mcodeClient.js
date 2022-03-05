@@ -21,14 +21,13 @@
  *      DESCRIPTION:
  *      ------------
  *
- *      This module implements the MicroCODE's Common JavaScript Client/Front End functions.
- *
+ *      This module implements the MicroCODE's Common JavaScript Client/Front-End functions.
  *
  *
  *      REFERENCES:
  *      -----------
  *
- *      1. ...
+ *      1. MIT xPRO Course: Professional Certificate in Coding: Full Stack Development with MERN
  *
  *
  *      VIDEOS:
@@ -44,6 +43,7 @@
  *  Date:         By-Group:   Rev:     Description:
  *
  *  27-Jan-2022   TJM-MCODE  {0001}    New module for common reusable Javascript UI/Client functions.
+ *  05-Mar-2022   TJM-MCODE  {0002}    Documentation updates.
  *
  *
  *

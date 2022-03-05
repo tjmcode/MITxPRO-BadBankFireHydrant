@@ -25,6 +25,7 @@
  *      to implement the MIT 'Bad Bank' Fire Hydrant project.
  *
  *      This module defines HTML calls into the API functions of our Server.
+ *      Also known as the 'Function Hooks' for each UI Widget.
  *      This implements the Client-side, the 'FRONT END'.
  *
  *      The goal: Fire Hydrant Award, and prepare to build LADDERS Web Services.
@@ -60,13 +61,11 @@
  *  Date:         By-Group:   Rev:     Description:
  *
  *  24-Dec-2021   TJM-MCODE  {0001}    New module for MIT Fire Hydrant assignment.
- *
+ *  05-Mar-2022   TJM-MCODE  {0002}    Documentation updates.
  *
  *
  */
 "use strict";
-
-//// FUNCTION HOOKS for each UI WIDGET...
 
 /**
  * Create USER ACCOUNT on server.
