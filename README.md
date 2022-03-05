@@ -189,7 +189,6 @@ Contributors names and contact info
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
-
 ## Acknowledgments
 
 This was created a ab branch of Dr. Abel Sanchez' MIT Bad Bank
