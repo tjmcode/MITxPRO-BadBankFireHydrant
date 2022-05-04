@@ -429,7 +429,7 @@ var showError = function (functionName, errorMessage)
 };
 
 /**
- * Removes the last Targ from the UI.
+ * Removes the last Target from the UI.
  *
  */
 var showBlankTarget = function ()
