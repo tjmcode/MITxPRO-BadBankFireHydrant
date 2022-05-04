@@ -176,6 +176,8 @@ Contributors names and contact info
 
 ## Version History
 
+* 0.3
+    * Corrected 'timeStamp' function
 * 0.2
     * Moved README PNG files into /images folder vs. embedded
     * See [commit change]() or See [release history]()
