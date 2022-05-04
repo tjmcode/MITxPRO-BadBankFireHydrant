@@ -44,6 +44,7 @@
  *
  *  27-Jan-2022   TJM-MCODE  {0001}    New module for common reusable Javascript UI/Client functions.
  *  05-Mar-2022   TJM-MCODE  {0002}    Documentation updates.
+ *  04-May-0222   TJM-MCODE  {0003}    Corrected 'month' in timeStamp.
  *
  *
  *
@@ -58,10 +59,11 @@
 function timeStamp()
 {
     let now = new Date();
+    let month = Number(now.getMonth()) + 1;  // {0003}
     return (
         now.getFullYear() +
         "-" +
-        now.getMonth() + 1 +
+        month +
         "-" +
         now.getDate() +
         " " +
