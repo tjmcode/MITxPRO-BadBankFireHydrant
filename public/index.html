@@ -1,36 +1,196 @@
-<!-- <copyright file="index.html" company="MicroCODE Incorporated">Copyright © 2021 MicroCODE Incorporated Troy, MI</copyright><author>Timothy J. McGuire</author> -->
+<!-- #region  H E A D E R -->
+<!-- copyright file="index.html" company="MicroCODE Incorporated" Copyright © 2022 MicroCODE Incorporated Troy, MI author="Timothy J. McGuire" -->
+<!-- #region  P R E A M B L E -->
+<!-- #region  D O C U M E N T A T I O N -->
+<!--
+ *      Title:    MicroCODE Common HTML Template
+ *      Module:   Modules (./mcodeTemplate.html)
+ *      Customer: Internal
+ *      Creator:  MicroCODE Incorporated
+ *      Date:     March 2022
+ *      Author:   Timothy J McGuire
+ *
+ *      Designed and Coded: 2022 MicroCODE Incorporated
+ *
+ *      This software and related materials are the property of
+ *      MicroCODE Incorporated and contain confidential and proprietary
+ *      information. This software and related materials shall not be
+ *      duplicated, disclosed to others, or used in any way without the
+ *      written of MicroCODE Incorported.
+ *
+ *
+ *      DESCRIPTION:
+ *      ------------
+ *
+ *      This module implements the MicroCODE's Common HTML Template.
+ *      This file is copied to start all MicroCODE Web Pages.
+ *
+ *
+ *      REFERENCES:
+ *      -----------
+ *
+ *      1. MIT xPRO CSS Style Guide
+ *         https://student.emeritus.org/courses/3291/files/2554233/download?wrap=1
+ *
+ *      2. Google HTML/CSS Style Guide
+ *         https://google.github.io/styleguide/htmlcssguide.html
+ *
+ *      3. MicroCODE JavaScript Style Guide
+ *         Local File: MCX-S02 (Internal JS Style Guide).docx
+ *         https://github.com/MicroCODEIncorporated/JavaScriptSG
+ *
+ *      4. MicroCODE HTML-CSS Style Guide
+ *         Local File: MCX-S03 (Internal HHTML-CSS Style Guide).docx
+ *         https://github.com/MicroCODEIncorporated/HTML-CSS-SG
+ *
+ *
+ *
+ *      DEMONSTRATION VIDEOS:
+ *      --------------------
+ *
+ *      1. ...
+ *
+ *
+ *
+ *      MODIFICATIONS:
+ *      --------------
+ *
+ *  Date:         By-Group:   Rev:     Description:
+ *
+ *  04-Mar-2022   TJM-MCODE  {0001}    New file for starting all HTML files to maintain common structure.
+ *  21-Mar-2022   TJM-MCODE  {0002}    Added Buttons 4, 5; added Bootstrap Minimum Styles.
+ *
+ *
+-->
 
+<!-- #endregion -->
+<!-- #endregion -->
+<!-- #endregion -->
+
+<!-- H T M L : page layout -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<!-- Popular Style Sheets from BOOTSTRAP -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- #region  C S S : visual styles -->
 
-<!-- HTTP Server calls thru Browser via SUPER AGENT -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+    <!-- Popular Style Sheets from BOOTSTRAP -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-<!-- The Web Site -->
+    <!-- Page Specific Styles -->
+    <style>
 
-<body>
-    <div id="navigation"></div>
-    <main role="main" class="container" style="margin-top:20px">
+    </style>
 
-        <!-- the UI element used to display a User Data Entry Form -->
-        <div id="target"></div>
+    <!-- #endregion -->
 
-        <!-- the UI element used to display Resils to the User -->
-        <div id="result"></div>
+    <!-- #region  H E A D E R -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=120, initial-scale=1.0">
+        <title>MIT xPRO: WEEK n</title>
 
-    </main>
-</body>
+        <!-- #region  F O N T S -- our default fonts -->
 
-<!-- Our MicroCODE JS Client Functions -->
-<script src='modules/mcodeClient.js'></script>
+        <link rel="preconnect"
+              href="https://fonts.googleapis.com">
+        <link rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossorigin>
+        <!-- FRANKLIN 100 'Thin' -->
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap"
+              rel="stylesheet">
+        <!-- FRANKLIN 600 'Demi' -->
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap"
+              rel="stylesheet">
 
-<!-- Our BAD BANK UI Functions -->
-<script src='modules/ui.js'></script>
+        <!-- MICHROMA (Eurostile) 400 'Normal' -->
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+              rel="stylesheet">
 
-<!-- Our BAD BANK API Functions -->
-<script src='api/api.js'></script>
+        <!-- QUESTRIAL 400 'Normal' -->
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+              rel="stylesheet">
+
+        <!-- #endregion -->
+    </head>
+    <!-- #endregion -->
+
+    <!-- #region  B O D Y -->
+    <body>
+        <div id="navigation"></div>
+        <main role="main"
+              class="container"
+              style="margin-top:20px">
+
+            <!-- the UI element used to display a User Data Entry Form -->
+            <div id="target"></div>
+
+            <!-- the UI element used to display Results to the User -->
+            <div id="result"></div>
+
+        </main>
+    </body>
+    <!-- #endregion -->
+
+    <!-- #region  D A T A B A S E : data source(s) -->
+    <!-- <script src="moduleData.js"></script> -->
+    <!-- #endregion -->
+
+    <!-- #region  I M P O R T : shared JavaScript code -->
+
+    <!-- HTTP Server calls thru Browser via SUPER AGENT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+
+    <!-- Our MicroCODE JS Client Functions -->
+    <script src='modules/mcodeClient.js'></script>
+
+    <!-- Our BAD BANK UI Functions -->
+    <script src='modules/ui.js'></script>
+
+    <!-- Our BAD BANK API Functions -->
+    <script src='api/api.js'></script>
+
+    <!-- #endregion -->
+
+    <!-- J A V A S C R I P T : page specific code -->
+    <script>
+
+        // #region  P R I V A T E   C O N S T A N T S
+
+        // #endregion
+
+        // #region  P R I V A T E   F I E L D S
+
+        // #endregion
+
+        // #region  P R I V A T E   F U N C T I O N S
+
+        // #endregion
+
+        // #region  C A L L B A C K S
+
+        // #endregion
+
+        // #region  E V E N T   H A N D L E R S
+
+        // #endregion
+
+        // #region  E X E C U T I O N
+
+        // Load data sources...
+
+        // Map Event Handlers...
+
+        // Set Timeout Events...
+
+        // Run Timed Events...
+
+        // #endregion
+
+    </script>
 
 </html>
