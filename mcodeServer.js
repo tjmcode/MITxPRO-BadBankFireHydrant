@@ -1,8 +1,8 @@
 // <copyright file="mcodeServer.js" company="MicroCODE Incorporated">Copyright © 2021 MicroCODE Incorporated Troy, MI</copyright><author>Timothy J. McGuire</author>
 
 /*
- *      Title:    MicroCODE Common Client Function Library
- *      Module:   modules (MicroCODE:mcodeClient.js)
+ *      Title:    MicroCODE Common Server Function Library
+ *      Module:   modules (MicroCODE:mcodeServer.js)
  *      Project:  MicroCODE Common Library
  *      Customer: Internal
  *      Creator:  MicroCODE Incorporated
